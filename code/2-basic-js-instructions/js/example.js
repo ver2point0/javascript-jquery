@@ -25,3 +25,15 @@ elSign.textContent = sign;
 // get element with id of tiles then update its contents
 var elTiles = document.getElementById("tiles");
 elTiles.textContent = tiles;
+
+// get element with id of subTotal then update its contents
+var elSubTotal = document.getElementById("subTotal");
+elSubTotal.textContent = "$" + subTotal;
+
+// get element with id of shipping then update its contents
+var elShipping = document.getElementById("shipping");
+elShipping.textContent = "$" + shipping;
+
+// get element with id of grandTotal then update its contents
+var elGrandTotal = document.getElementById("grandTotal");
+elGrandTotal.textContent = "$" + grandTotal;
