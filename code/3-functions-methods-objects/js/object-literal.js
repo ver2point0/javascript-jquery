@@ -6,3 +6,6 @@ var hotel = {
     return this.rooms - this.booked
   }
 };
+
+var elName = document.getElementById("hotelName");
+elName.textContent = hotel.name;
