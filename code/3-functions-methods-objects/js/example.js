@@ -10,7 +10,15 @@
     }
   };
   
+  var hotelName, roomRate, specialRate;
+  hotelName = document.getElementById("hotelName");
+  roomRate = document.getElementById("roomRate");
+  specialRate = document.getElementById("specialRate");
   
+  hotelName.textContent = hotel.name;
+  roomRate.textContent = "$" + hotel.roomRate.toFixed(2);
+  specialRate.textContent = "$" + hotel.offerPrice();
   
+
   
 });
