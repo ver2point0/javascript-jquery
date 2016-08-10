@@ -1,5 +1,5 @@
 // get the first list item
-var firstItem = document.getElementById('One');
+var firstItem = document.getElementById('one');
 
 // if it has class attribute 
 if (firstItem.hasAttribute('class')) {
