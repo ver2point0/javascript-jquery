@@ -23,5 +23,16 @@ function itemDone(e) {                  // declare function
   The next 10 lines improve that example
   */
   
+  if (target.nodeName.toLowerCase() == "a") {   // if user clicked on an a element
+    elListItem = target.parentNode;             // get its li element
+    elList = elListItem.parentNode;             // get the ul element
+    elList.removeChild(elListItem);             // remove list item from the list
+  }
+  if (target.nodeName.toLowerCase() == "em") {  // if user clicked on an em element
+    elListItem = target.parentNode.parentNode;  // get its li element
+    elList = elListItem.parentNode;             // get the ul element
+    elList.removeChild(elListItem);             // remove list item from the list
+  }
+  
   
 }
