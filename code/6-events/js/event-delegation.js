@@ -34,5 +34,13 @@ function itemDone(e) {                  // declare function
     elList.removeChild(elListItem);             // remove list item from the list
   }
   
+  // prevent the link from taking you elsewhere
+  if (e.preventDefault) {                       // if preventDefault() works
+    e.preventDefault();                         // use preventDefault()
+  } else {                                      // otherwise
+    e.returnValue = false;                      // use old IE version
+  }
+  
+  // set up event listeners to call itemDone() on click
   
 }
