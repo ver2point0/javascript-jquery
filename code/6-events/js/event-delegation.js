@@ -40,7 +40,17 @@ function itemDone(e) {                  // declare function
   } else {                                      // otherwise
     e.returnValue = false;                      // use old IE version
   }
-  
-  // set up event listeners to call itemDone() on click
-  
+}
+
+// set up event listeners to call itemDone() on click
+var el = document.getElementById('shoppingList');       // get shopping list
+if (el.addEventListener) {                              // if event listeners work
+  el.addEventListener('click',                          // add listener on click
+  function(e) {
+    itemDone(e); },                                     // it calls itemDone()
+  false);                                               // use bubbling phase for flow
+} else {                                                // otherwise
+  el.attachEvent('onclick', function(e) {               // use old IE model: onclick
+    itemDone(e);
+  });
 }
